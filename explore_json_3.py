@@ -36,14 +36,13 @@ data = [{"type": "scattergeo",
             "color": mags,
             "colorscale": "Viridis",
             'reversescale': True,
-            'colorbar':["title","coordinates"]
+            'colorbar':{"title":"Magnitude"}
         },
 }]
 
-my_layout = Layout(titles = "Global Earthquakes")
+my_layout = Layout(title="Global Earthquakes")
 
 fig = {"data":data, "layout":my_layout}
 
-offline.plot(fig, filename = "global_earthquakes_html")
+offline.plot(fig, filename="global_earthquakes.html")
 
-print("hello")
